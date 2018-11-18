@@ -27,16 +27,8 @@ namespace MusicStore
         {
             InitializeComponent();
 
-            //IList<AlbumSummary> sum = new List<AlbumSummary>();
-
-            //sum = AlbumSummaryService.GetAlbumSummariesByGenre(2);
-
-            //foreach (AlbumSummary a in sum)
-            //{
-            //    MessageBox.Show(a.ToString());
-            //}
-
             genreComboBox.ItemsSource = GenreRepository.GetGenres();
+
         }
 
         private void genreComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -46,7 +38,6 @@ namespace MusicStore
             IList<AlbumSummary> sum = new List<AlbumSummary>();
             sum = AlbumSummaryService.GetAlbumSummariesByGenre(genre.GenreId);
             albumDataGrid.Items.Clear();
-            //albumDataGrid.DataContext = sum;
 
             foreach (AlbumSummary albumSummary in sum)
             {
