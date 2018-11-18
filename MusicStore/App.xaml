@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:MusicStore"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:ConvertIntToString x:Key="ConvertIntToString"></local:ConvertIntToString>
     </Application.Resources>
 </Application>

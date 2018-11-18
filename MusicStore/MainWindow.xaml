@@ -12,7 +12,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Width="150" Binding="{Binding Path=Title}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Artist" Width="200" Binding="{Binding Path=Artist}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Price" Width="100" Binding="{Binding Path=Price, StringFormat='c'}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Width="100" Binding="{Binding Path=Price, Converter={StaticResource ConvertIntToString}, StringFormat='c'}"></DataGridTextColumn>
 
             </DataGrid.Columns>
         </DataGrid>
